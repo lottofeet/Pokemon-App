@@ -1,28 +1,25 @@
 let pokemonList = [{
-	name: 'caterpie ', 
-	height: 0.3, 
+	name: 'Caterpie ', 
+	height: 4, 
 	types: ['bug', 'electric']
   },
   {
-	name: 'sandslash ',
+	name: 'Sandslash ',
 	height: 1,
 	type: ['ground']
   },
   {
-	name: 'meowth ',
-	height: 0.4,
+	name: 'Meowth ',
+	height: 3,
 	type:['normal']
   },
 ]
 
 for (let i = 0; i < pokemonList.length; i++) {
-	document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}<br>`);
-	}	
-
-if (pokemonList.height > 1 ) {
-		console.log('wow thats big');
-	} else if (pokemonList.height < 0.5) {
-		console.log('wow thats small');
+	if (pokemonList[i].height >= 4 ) {
+		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height} - Wow! That's big! <br>`);
 	} else {
-		console.log('wow, what an unusual size');
+		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}  <br>`);
 	}
+
+}	
