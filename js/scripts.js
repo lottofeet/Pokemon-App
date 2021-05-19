@@ -19,9 +19,10 @@ for (let i = 0; i < pokemonList.length; i++) {
 	document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}<br>`);	
 	}
 
-	if (`${pokemonList.height[i]}` >= 0.5) {
+
+	if (`${pokemonList[i].height}` >= 0.5) {
 		result('wow thats big')
-	} else if (pokemonList.height < 0.5) {
+	} else if (`${pokemonList[i].height}` < 0.5) {
 		result('wow thats small')
 	} else {
 		result('wow, what an unusual size');
