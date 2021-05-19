@@ -16,14 +16,13 @@ let pokemonList = [{
 ]
 
 for (let i = 0; i < pokemonList.length; i++) {
-	document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}<br>`);	
-	}
+	document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}<br>`);
+	}	
 
-
-	if (`${pokemonList[i].height}` >= 0.5) {
-		result('wow thats big')
-	} else if (`${pokemonList[i].height}` < 0.5) {
-		result('wow thats small')
+if (pokemonList.height > 1 ) {
+		console.log('wow thats big');
+	} else if (pokemonList.height < 0.5) {
+		console.log('wow thats small');
 	} else {
-		result('wow, what an unusual size');
+		console.log('wow, what an unusual size');
 	}
