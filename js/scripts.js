@@ -1,6 +1,6 @@
 let pokemonList = [{
 	name: 'Caterpie ', 
-	height: 4, 
+	height: 0.3, 
 	types: ['bug', 'electric']
   },
   {
@@ -10,19 +10,30 @@ let pokemonList = [{
   },
   {
 	name: 'Meowth ',
-	height: 3,
+	height: 0.4,
 	type:['normal']
   },
 ]
 
-for (let i = 0; i < pokemonList.length; i++) {
-	if (pokemonList[i].height >= 4 ) {
-		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height} - Wow! That's big! <br>`);
-	} else {
-		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}  <br>`);
-	}
 
-}	
+for (let i = 0; i < pokemonList.length; i++) {
+if (pokemonList[i].height > 0.9) {
+document.write(
+${pokemonList[i].name} height: ${pokemonList[i].height} - Wow thats big <br/>);
+} else {
+document.write(${pokemonList[i].name} height: ${pokemonList[i].height} <br/>);
+}
+}
+
+
+// for (let i = 0; i < pokemonList.length; i++) {
+// 	if (pokemonList[i].height > 0.9 ) {
+// 		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height} - Wow! That's big! <br>`);
+// 	} else {
+// 		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}  <br>`);
+// 	}
+
+// }	
 
 // for (let i = 0; i < pokemonList.length; i++) {
 //   document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}`);
