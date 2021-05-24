@@ -1,7 +1,8 @@
-let pokemonList = [{
+let pokemonList = [
+{
 	name: 'Caterpie ', 
 	height: 0.3, 
-	types: ['bug', 'electric']
+	type: ['bug', 'electric']
   },
   {
 	name: 'Sandslash ',
@@ -13,14 +14,10 @@ let pokemonList = [{
 	height: 0.4,
 	type:['normal']
   },
-]
+];
 
+// forEach() Loop - task 1.5
+pokemonList.forEach(function(pokemon) {
+  console.log('Name: ' + pokemon.name +'Height: ' + pokemon.height + ' Type: ' + pokemon.type);
+});
 
-
-for (let i = 0; i < pokemonList.length; i++) {
-	if (pokemonList[i].height > 0.9 ) {
-		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height} - Wow! That's big! <br>`);
-	} else {
-		document.write(`${pokemonList[i].name}  height:  ${pokemonList[i].height}  <br>`);
-	}
-}	
