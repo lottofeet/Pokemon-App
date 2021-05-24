@@ -18,6 +18,6 @@ let pokemonList = [
 
 // forEach() Loop - task 1.5
 pokemonList.forEach(function(pokemon) {
-  console.log('Name: ' + pokemon.name +'Height: ' + pokemon.height + ' Type: ' + pokemon.type);
+  document.write('Name: ' + pokemon.name +'Height: ' + pokemon.height + ' Type: ' + pokemon.type);
 });
 
