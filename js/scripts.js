@@ -1,3 +1,5 @@
+let pokemonRepository = (function(){
+
 let pokemonList = [
 {
 	name: 'Caterpie ', 
@@ -16,9 +18,26 @@ let pokemonList = [
   },
 ];
 
-// forEach() Loop - task 1.5
-pokemonList.forEach(function(pokemon) {
-  document.write('Name: ' + pokemon.name +'Height: ' + pokemon.height + ' Type: ' + pokemon.type);
+function getAll(){
+	return pokemonList;
+}
+
+function add(pokemon){
+	pokemonList.push(pokemon);
+}
+
+return{
+	getAll: getAll,
+	add: add
+};
+
+})();
+
+
+
+pokemonRepository.getall()forEach(function() {
+  document.write(pokemonRepository.getAll);
   document.write(`<br>`);
 });
+
 
