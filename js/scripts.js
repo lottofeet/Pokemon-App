@@ -33,14 +33,9 @@ return{
 
 })();
 
-// // forEach() Loop - task 1.5
-// pokemonList.forEach(function(pokemon) {
-//   document.write('Name: ' + pokemon.name +'Height: ' + pokemon.height + ' Type: ' + pokemon.type);
-//   document.write(`<br>`);
-// });
 
 
-pokemonRepository.getall().forEach(function(pokemon) {
+pokemonRepository.getall()forEach(function() {
   document.write(pokemonRepository.getAll);
   document.write(`<br>`);
 });
