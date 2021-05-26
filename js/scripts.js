@@ -1,4 +1,4 @@
-let pokemonRepository = (function(){
+let pokemonRepository = (function(){ // IIFE
 
 let pokemonList = [
 {
@@ -26,23 +26,29 @@ function add(pokemon){
 	pokemonList.push(pokemon);
 }
 
+function addListItem(pokemon){
+  let pokemonList = document.querySelector('.pokemon-list'); // variable assigned to <ul> in index.html
+  let listItem = document.createElement('li'); // variable creating a list item
+  let button = document.createElement('button'); // variable creating a button 
+
+  button.innerText = pokemon.name; // assigning the button text to be the pokemon name
+  button.classList.add('button-class'); // adding class for css 
+  listItem.appendChild(button);
+  pokemonList.appendChild(listItem);
+}
+
 return{
 	getAll: getAll,
-	add: add
+	add: add,
+	addListItem: addListItem
 };
 
 })();
 
 
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write('Name: ' + pokemon.name +'Height: ' + pokemon.height + ' Type: ' + pokemon.type);
-  document.write(`<br>`);
+pokemonRepository.getAll().forEach(function(pokemon) { // forEach loop
+	pokemonRepository.addListItem(pokemon);
 });
 
 
-// 1.5 task forEach loop//
-// pokemonList.forEach(function(pokemon) {
-//   document.write('Name: ' + pokemon.name +'Height: ' + pokemon.height + ' Type: ' + pokemon.type);
-//   document.write(`<br>`);
-// });
