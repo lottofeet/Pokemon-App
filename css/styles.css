@@ -4,6 +4,7 @@ Colors:
 	light-teal #4dd6e2;
 	white:  #fff;
 	medium-grey:  #5f5f5f;
+	black: #000;
 
 */
 
@@ -12,6 +13,7 @@ Colors:
 	--light-teal: #4dd6e2;
 	--white:  #fff;
 	--medium-grey: #5f5f5f;
+	--black: #000;
 }
 
 * {
@@ -28,7 +30,7 @@ ul {
 
 .button-class {
 	background-color: var(--light-teal);
-	color: var(--white);
+	color: var(--black);
 	padding: 10px;
   	border-radius: 3px;
   	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
