@@ -69,7 +69,7 @@ let pokemonRepository = (function(){ // IIFE
 	}
 
 	// displays modal
-	function showModal(title, text) {
+	function showModal(pokemon) {
 
 		// Clears existing modal content
 		modalContainer.innerHTML = '';
@@ -85,11 +85,11 @@ let pokemonRepository = (function(){ // IIFE
 
 		// creates title <h1> element
 		let titleElement = document.createElement('h1');
-		titleElement.innerText = 'pokemon.name';
+		titleElement.innerText = loadDetails;
 
 		// creates <p> element
 		let contentElement = document.createElement('p');
-		contentElement.innerText = text;
+		contentElement.innerText = 'text';
 
 
 		modal.appendChild(closeButtonElement);
@@ -108,7 +108,7 @@ let pokemonRepository = (function(){ // IIFE
 	//  Dispays pokemons
 	function showDetails(pokemon){
 		pokemonRepository.loadDetails(pokemon).then(function () {
-			showModal();
+			showModal(pokemon);
 			console.log(pokemon);
 		});
 	}
