@@ -62,7 +62,11 @@ let pokemonRepository = (function(){ // IIFE
 			// below code adds the details to the item
 			item.imageUrl = details.sprites.front_detault;
 			item.height = details.height;
-			item.types = details.types;
+			// calls the types array
+			item.types = [];
+			for ( let i = 0; i < details.types.length; i++) {
+				item.types.push(details.types[i].type.name);
+			} 
 		}).catch(function (e) {
 			console.error(e);
 		});
@@ -84,17 +88,17 @@ let pokemonRepository = (function(){ // IIFE
 		closeButtonElement.addEventListener('click', hideModal);
 
 		// creates title <h1> element
-		let titleElement = document.createElement('h1');
-		titleElement.innerText = loadDetails;
+		let nameElement = document.createElement('h1');
+		nameElement.innerText = pokemon.name;
 
 		// creates <p> element
-		let contentElement = document.createElement('p');
-		contentElement.innerText = 'text';
+		let typeElement = document.createElement('p');
+		typeElement.innerText = pokemon.types;
 
 
 		modal.appendChild(closeButtonElement);
-		modal.appendChild(titleElement);
-		modal.appendChild(contentElement);
+		modal.appendChild(nameElement);
+		modal.appendChild(typeElement);
 		modalContainer.appendChild(modal);
 
 		modalContainer.classList.add('is-visible');
@@ -118,7 +122,7 @@ let pokemonRepository = (function(){ // IIFE
 			let target = e.target;
 			if (target === modalContainer) {
 			hideModal();
-			}
+			} 
 		});
 
 		// escape-key exit
