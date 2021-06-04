@@ -91,14 +91,19 @@ let pokemonRepository = (function(){ // IIFE
 		let nameElement = document.createElement('h1');
 		nameElement.innerText = pokemon.name;
 
-		// creates <p> element
+		// creates <p> element for type
 		let typeElement = document.createElement('p');
 		typeElement.innerText = pokemon.types;
+
+		// creates <p> element for height
+		let heightElement = document.createElement('p');
+		heightElement.innerText = pokemon.height;
 
 
 		modal.appendChild(closeButtonElement);
 		modal.appendChild(nameElement);
 		modal.appendChild(typeElement);
+		modal.appendChild(heightElement);
 		modalContainer.appendChild(modal);
 
 		modalContainer.classList.add('is-visible');
