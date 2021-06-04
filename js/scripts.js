@@ -60,7 +60,7 @@ let pokemonRepository = (function(){ // IIFE
 			return response.json();
 		}).then(function (details) {
 			// below code adds the details to the item
-			item.imageUrl = details.sprites.front_detault;
+			item.imageUrl = details.sprites.front_default;
 			item.height = details.height;
 			// calls the types array
 			item.types = [];
