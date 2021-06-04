@@ -91,6 +91,12 @@ let pokemonRepository = (function(){ // IIFE
 		let nameElement = document.createElement('h1');
 		nameElement.innerText = pokemon.name;
 
+		// creates img element
+		let imageElement = document.createElement('img');
+		// imageElement.innerHTML = pokemon.imageUrl;
+		imageElement.src = pokemon.imageUrl;
+
+
 		// creates <p> element for type
 		let typeElement = document.createElement('p');
 		typeElement.innerText = pokemon.types;
@@ -102,6 +108,7 @@ let pokemonRepository = (function(){ // IIFE
 
 		modal.appendChild(closeButtonElement);
 		modal.appendChild(nameElement);
+		modal.appendChild(imageElement);
 		modal.appendChild(typeElement);
 		modal.appendChild(heightElement);
 		modalContainer.appendChild(modal);
