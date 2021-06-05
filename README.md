@@ -1,1 +1,1 @@
-
+Simple Pokédex JavaScript App
