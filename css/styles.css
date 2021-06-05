@@ -24,13 +24,29 @@ body {
 	text-align: center;
 }
 
+
+#search-bar {
+  text-align: center;
+  width: 250px;
+  max-width: 100%;
+  
+}
+
 ul {
 	list-style-type: none; /*removes bulletpoints */
+}
+
+.button-class:hover,
+.button-class:focus {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .button-class {
 	background-color: var(--light-teal);
 	color: var(--black);
+  width: 250px;
+  max-width: 100%;
 	padding: 10px;
   	border-radius: 3px;
   	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
