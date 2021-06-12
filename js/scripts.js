@@ -75,45 +75,62 @@ let pokemonRepository = (function(){ // IIFE
 	// displays modal
 	function showModal(pokemon) {
 
+		let modalBody = $('.modal-body');
+		let modalTitle = $('.modal-title');
+		let modalHeader = $('.modal-header');
+
 		// Clears existing modal content
-		modalContainer.innerHTML = '';
+		modalTitle.empty();
+		modalBody.empty();
 
-		let modal = document.createElement('div');
-		modal.classList.add('modal');
+		// // creates title <h1> element
+		let nameElement = $('<h1>' + pokemon.name + '</h1>');
 
-		// Add the new modal Content
-		let closeButtonElement = document.createElement('button');
-		closeButtonElement.classList.add('modal-close');
-		closeButtonElement.innerText = 'Close';
-		closeButtonElement.addEventListener('click', hideModal);
+		let imageElement = $('<img class="modal-img" style="width:50%">');
+		imageElementFront.attr('src', pokemon.imageUrl);
 
-		// creates title <h1> element
-		let nameElement = document.createElement('h1');
-		nameElement.innerText = pokemon.name;
+		let typeElement = $('<p>' + pokemon.types + '</p>');
+		let heightElement = $('<p>' + pokemon.height + '</p>');
 
-		// creates img element
-		let imageElement = document.createElement('img');
-		// imageElement.innerHTML = pokemon.imageUrl;
-		imageElement.src = pokemon.imageUrl;
+		modalTitle.append(nameElement);
+		modalBody.append(imageElementFront);
+		modalBody.append(typeElement);
+		modalBody.append(heightElement);
+		
 
 
-		// creates <p> element for type
-		let typeElement = document.createElement('p');
-		typeElement.innerText = pokemon.types;
 
-		// creates <p> element for height
-		let heightElement = document.createElement('p');
-		heightElement.innerText = pokemon.height;
+		// // Add the new modal Content
+		// let closeButtonElement = document.createElement('button');
+		// closeButtonElement.classList.add('modal-close');
+		// closeButtonElement.innerText = 'Close';
+		// closeButtonElement.addEventListener('click', hideModal);
 
 
-		modal.appendChild(closeButtonElement);
-		modal.appendChild(nameElement);
-		modal.appendChild(imageElement);
-		modal.appendChild(typeElement);
-		modal.appendChild(heightElement);
-		modalContainer.appendChild(modal);
 
-		modalContainer.classList.add('is-visible');
+		// // creates img element
+		// let imageElement = document.createElement('img');
+		// // imageElement.innerHTML = pokemon.imageUrl;
+		// imageElement.src = pokemon.imageUrl;
+
+
+		// // creates <p> element for type
+		// let typeElement = document.createElement('p');
+		// typeElement.innerText = pokemon.types;
+
+		// // creates <p> element for height
+		// let heightElement = document.createElement('p');
+		// heightElement.innerText = pokemon.height;
+
+
+		// modal.appendChild(closeButtonElement);
+		// modal.appendChild(nameElement);
+		// modal.appendChild(imageElement);
+		// modal.appendChild(typeElement);
+		// modal.appendChild(heightElement);
+		// modalContainer.appendChild(modal);
+
+		// modalContainer.classList.add('is-visible');
 	}
 
 	// Hides Modal
