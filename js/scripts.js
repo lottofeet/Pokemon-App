@@ -84,6 +84,14 @@ let pokemonRepository = (function(){ // IIFE
 		});
 	}
 
+	// Searchbar:
+
+	function search() {
+		let searchInput = document.querySelector('#search-bar');
+
+		
+	}
+
 	// displays modal
 	function showModal(pokemon) {
 
