@@ -25,7 +25,8 @@ body {
 }
 
 
-#search-bar {
+
+.search-bar {
   text-align: center;
   width: 250px;
   max-width: 100%;
