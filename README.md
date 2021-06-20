@@ -1,7 +1,7 @@
 # Simple Pokédex JavaScript App
-##Technologies:
-- [PokeAPI]
-- [jQuery]
-- [Bootstrap]
-- [ESLint]
+Technologies:
+- PokeAPI
+- jQuery
+- Bootstrap
+- ESLint
   
