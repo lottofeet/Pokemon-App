@@ -1,19 +1,9 @@
- 
-
-Colors: 
-	light-teal #4dd6e2;
-	white:  #fff;
-	medium-grey:  #5f5f5f;
-	black: #000;
-
-*/
-
-:root {
-	/* Colors*/
-	--light-teal: #4dd6e2;
-	--white:  #fff;
-	--medium-grey: #5f5f5f;
-	--black: #000;
+Colors light-teal #4dd6e2 white #fff medium-grey #5f5f5f black #000 */ :root {
+  /* Colors*/
+  --light-teal: #4dd6e2;
+  --white: #fff;
+  --medium-grey: #5f5f5f;
+  --black: #000;
 }
 
 * {
@@ -21,19 +11,15 @@ Colors:
 }
 
 body {
-	text-align: center;
+  text-align: center;
 }
-
-
 
 .search-bar {
   text-align: center;
   width: 250px;
   max-width: 100%;
-  
 }
 
 ul {
-	list-style-type: none; /*removes bulletpoints */
+  list-style-type: none; /*removes bulletpoints */
 }
-
