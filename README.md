@@ -5,3 +5,5 @@ Technologies:
 - Bootstrap
 - ESLint
   
+# API
+https://pokeapi.co/
