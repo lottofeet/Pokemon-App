@@ -12,6 +12,7 @@ Colors light-teal #4dd6e2 white #fff medium-grey #5f5f5f black #000 */ :root {
 
 body {
   text-align: center;
+  margin: 0 auto;
 }
 
 .btn-primary {
@@ -20,11 +21,36 @@ body {
   margin: 2px;
 }
 .search-bar {
-  text-align: center;
   width: 250px;
   max-width: 100%;
 }
 
 ul {
   list-style-type: none; /*removes bulletpoints */
+  /* narrows the list to 800 px */
+  max-width: 800px;
+  width: 100%;
+
+  /* centers list hoizontally*/
+  margin: 0 auto;
+
+  /* makes the list smaller so I can scroll w/in the ul & not the whole page*/
+  height: 70vh;
+  overflow: auto;
+  border-bottom: 1px solid lightgray;
+}
+
+.navbar {
+  /*centers input inside nav*/
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--black);
+  border-radius: 5px;
+
+  /*narrow the nav to 800px*/
+  max-width: 800px;
+  width: 100%;
+
+  margin: 0 auto;
 }
